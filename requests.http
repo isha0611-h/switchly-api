@@ -1,0 +1,32 @@
+
+### 1. Create an organization
+POST http://localhost:8080/api/v1/orgs
+Content-Type: application/json
+
+{
+  "name": "Switchly Demo"
+}
+
+### 2. Create a project
+POST http://localhost:8080/api/v1/projects
+Content-Type: application/json
+
+{
+  "organizationId": "77680c76-c076-4c13-a394-e7c152876486",
+  "name": "My First Project"
+}
+
+### 3. Get all projects
+GET http://localhost:8080/api/v1/projects
+
+### 4. Update a project
+PUT http://localhost:8080/api/v1/projects/cba03587-14f0-47b1-8be3-6a218fbc7a33
+Content-Type: application/json
+
+{
+  "organizationId": "77680c76-c076-4c13-a394-e7c152876486",
+  "name": "Switchly Updated Project"
+}
+
+### 5. Delete a project
+DELETE http://localhost:8080/api/v1/projects/cba03587-14f0-47b1-8be3-6a218fbc7a33
